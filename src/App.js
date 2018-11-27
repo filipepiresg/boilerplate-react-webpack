@@ -1,12 +1,11 @@
 import React from "react";
 
+import "./styles/App.scss";
+
 const App = () => {
-    console.log("Hello World");
-    return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
-    );
+    return <h1 id="title">LSI é top</h1>;
 };
+
+App.displayName = "App";
 
 export default App;

@@ -1,16 +1,20 @@
 {
-    "name": "webpack-react-template",
+    "name": "boilerplate-react-webpack",
     "version": "1.0.0",
-    "description": "Boilerplate with Webpack + React",
+    "description": "Boilerplate with React + Webpack",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --mode development --hot --open Chrome",
-        "build": "webpack --mode production"
+        "start": "webpack-dev-server --mode development --open Chrome",
+        "build": "webpack -p"
     },
     "keywords": [
-        "webpack",
         "react",
-        "webpack and react",
+        "webpack",
+        "mobx",
+        "react-router-dom",
+        "axios",
+        "sass",
+        "css",
         "boilerplate"
     ],
     "author": "Filipe Pires <filipepiresg@gmail.com> (http://github.com/filipepiresg)",
@@ -22,13 +26,21 @@
         "babel-loader": "^8.0.4",
         "css-loader": "^1.0.1",
         "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.10.0",
+        "react-hot-loader": "^4.3.12",
+        "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
         "webpack": "^4.26.1",
         "webpack-cli": "^3.1.2",
         "webpack-dev-server": "^3.1.10"
     },
     "dependencies": {
+        "axios": "^0.18.0",
+        "mobx": "^5.6.0",
+        "mobx-react": "^5.4.2",
         "react": "^16.6.3",
-        "react-dom": "^16.6.3"
+        "react-dom": "^16.6.3",
+        "react-router-dom": "^4.3.1",
+        "syntec-apollo-11": "^0.4.23"
     }
 }
