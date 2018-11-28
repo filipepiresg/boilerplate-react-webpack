@@ -1,16 +1,18 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
     output: {
-        path: __dirname + "/build",
+        path: path.join(__dirname, "build"),
         filename: "bundle.js"
     },
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -31,7 +33,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "build/index.html",
             filename: "./index.html"
-        })
+        }),
+        new CopyWebpackPlugin([
+            // Copy directory contents to {output}/to/directory/
+            { from: path.join(__dirname, "src/assets") }
+        ])
     ],
     devServer: {
         contentBase: "./build",
