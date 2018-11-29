@@ -42,5 +42,6 @@ module.exports = {
     devServer: {
         contentBase: "./build",
         hot: true
-    }
+    },
+    devtool: 'source-map'
 };
