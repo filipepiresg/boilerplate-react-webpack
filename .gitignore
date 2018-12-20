@@ -3,4 +3,5 @@ node_modules/
 
 # dependecies manager
 package-*
+yarn.lock
 yarn-*

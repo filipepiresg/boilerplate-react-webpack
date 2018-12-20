@@ -1,11 +1,16 @@
 import React from "react";
+import { observable, action } from "mobx";
 
 import "./styles/App.scss";
 
-const App = () => {
-    return <h1 id="title">LSI é top</h1>;
-};
+class App extends React.Component {
+    @observable start = Date.now();
+    state = {
+        date: ""
+    };
 
-App.displayName = "App";
-
+    render() {
+        return <h1 id="title">{this.start}</h1>;
+    }
+}
 export default App;
